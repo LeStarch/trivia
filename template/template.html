@@ -1,0 +1,21 @@
+<!-- Template for a question -->
+<script type="text/template" id="answer-template">
+    <% var checked = (answer == value)?"checked":"";%>
+    <input type="checkbox" class="answer-check" <%= checked %>>
+       <input type="text" class="answer-text" value="<%= value %>"><%= value %></input>
+    </input>
+</script>
+<!-- Template for editing form -->
+<script type="text/template" id="question-template">
+    <h3>Category:<input type="text" class="category" value="<%= question.category %>"><%= question.category %></input><h3>
+    <h4>Title:<input type="text" class="title" value="<%= question.title %>"><%= question.tile %></input></h4>
+    <p>Question:<input type="textarea" class="question" value="<%= question.question" %>><%= question.question %></input>
+    <%
+        var tmpl = _.template($("script#template-table").html());
+        _.each(models.answers,
+           function(value) {
+               <%= tmpl({"answer":question.answer,"value":value});
+           };
+        ) 
+    %>
+</script>
