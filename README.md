@@ -3,6 +3,8 @@ trivia
 
 A basic JavaScript (and Browser) powered trivia game.  Can be run in file mode (no http server needed).  All questions are broken into categories and have multiple-choice format.
 
+**Note:** This work is quasi-complete, but has been replace by the newer project: https://github.com/LeStarch/trivia-dual
+
 Usage
 =====
   Questions are in json found in "questions.js".
